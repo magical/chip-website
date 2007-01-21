@@ -1,0 +1,54 @@
+#levelsets {
+	background: transparent url(images/chipfloor32.png) no-repeat center left;
+	padding-left: 37px;
+	line-height: 32px;
+}
+
+#footer {
+	font-size: 67.5%;
+}
+
+body {
+	background: #d0dada url(images/mazetrans.png) center center;
+	font-family: Tahoma, Helvetica, sans-serif;
+}
+
+hr {
+	border: none;
+	border-bottom: dashed black 2px; 
+	}
+
+object, img {
+	border: 2px black dashed;
+	padding: 2px;
+}
+
+p.screenshot {
+	margin: auto;
+	display: block;
+}
+
+dt { clear: left; }
+dt img { float: left !important;
+	border: none;
+	padding: 0; }
+
+
+
+
+/* Thanks, positioniseverything.net ! */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix { display: inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
