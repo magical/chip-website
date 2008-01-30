@@ -86,7 +86,7 @@ Current version: 1.3<br>
 <dd>This was the first ever Chip's Challenge level editor.
 
 <dt><a href="http://web.archive.org/web/20030410045227/chrise.port5.com/prog/ChipW.htm">Chip's Workshop</a>, created by <cite>Chris E.</cite></dt>
-<dd>His web host, <a href="http://www.metawire.org">Metawire</a>, went down around February(?). If you want to download Chip's Workshop, you can use my <a href="../download/chipw.exe">mirrored copy</a>
+<dd>His web host, <a href="http://www.metawire.org">Metawire</a>, went down around February(?) 2006. If you want to download Chip's Workshop, you can use my <a href="../download/chipw.exe">mirrored copy</a>
 
 <dt><a href="http://cctools.translucentdragon.com/">CCEdit</a>, created by <cite>Micheal Hansen</cite></dt>
 <dd>A very advanced level editor. Features playtesting in MSCC or Tile World.
@@ -115,14 +115,14 @@ Current version: 1.3<br>
 <dt><a href="http://home.no.net/rspaans/download/other.html">T-Chip</a>, created by <cite>Ruben Spaans</cite></dt>
 <dd>Grants 999 seconds on all untimed levels in chips.dat.
 
-<dt><a href="http://andyrole.byethost6.com/downloads.htm">ChipEnd</a>, created by <cite>Andrew Role</cite></dt>
-<dd>A graphical utility which modifies chips.exe to show the game ending at different levels than 144 and 149. Also has an option to suppress the "Decade Messages".
+<!--dt><a href="http://andyrole.byethost6.com/downloads.htm">ChipEnd</a>, created by <cite>Andrew Role</cite></dt>
+<dd>A graphical utility which modifies chips.exe to show the game ending at different levels than 144 and 149. Also has an option to suppress the "Decade Messages".-->
 
 <dt><a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/chipend">chipend</a>, created by <cite>Brian Raiter</cite></dt>
-<dd>A non-graphical perl script which accomplishes the same thing as Andrew R.'s ChipEnd.
+<dd>Changes the end level numbers stored in the exe, to avoid the "Corrupt or inaccessible CHIPS.DAT" message. Can also suppress the decade messages.
 
-<dt><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/pgchip/">pgchip</a>, created by <cite>David Stolp</cite> (aka pieguy)</dt>
-<dd>Adds an entirely new tile to the game: the Ice Block! Ice blocks turn fire into water, and water into ice. Also, you can push multiple ice blocks in a row. pieguy created this patch so people would be able to play one of his devious levels. Check out pieguy's site to learn more about what ice blocks can do.
+<!--dt><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/pgchip/">pgchip</a>, created by <cite>David Stolp</cite> (aka pieguy)</dt>
+<dd>Adds an entirely new tile to the game: the Ice Block! Ice blocks turn fire into water, and water into ice. Also, you can push multiple ice blocks in a row. pieguy created this patch so people would be able to play one of his devious levels. Check out pieguy's site to learn more about what ice blocks can do.-->
 
 </dl>
 
@@ -189,26 +189,46 @@ Temaplate for graphics:
 -->
 
 <!----><hr><!---->
+
+<h2 id="patches">Patches</h2>
+There are a few patches that people have produced for the Windows port of Chip's Challenge.
+
+<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/ccpatch.html">ccpatch</a>, created by <cite>ccexplore</cite></h3>
+<p>
+Fixes a bug where, when Chip steps on a square with two transparent objects (in other words, keys, monsters or boots), the game crashes.
+</p>
+
+<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/fullsec.html">fullsec</a>, created by <cite>ccexplore</cite></h3>
+<p>
+Fixes another bug in the game, where the timer fails to fully reset. Also adds the ability to switch the game between even- and odd-step mode. <!--(For details on what that means, see <a href=""></a>)-->
+</p>
+
+<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/pgchip.html">pgchip</a>, created by <cite>pieguy</cite></h3>
+<p>
+Transforms one of the previously unused tiles into the Ice Block.
+</p>
+
+<!----><hr><!---->
 <!--
-          ___           ____________      ____       ___      ___   __
-         /  /\         /____   ____/\    /    |\    /  /\    /  /  / / /
-		/  / /         \___/  /\___\/   /  /| ||   /  / /   /  / / / /
-	   /  / /             /  / /       /  / | ||  /  / /   /  // / /
-	  /  / /             /  / /       /  / /| || /  / /   /    / /
-	 /  / /             /  / /       /  / / | ||/  / /   /  /\ \
-	/  /_/____     ____/  /_/__     /  / /  | |/  / /   /  / /\ \
-   /_________/\   /___________/\   /__/ /   |____/ /   /__/ /  \_\
-   \_________\/   \___________\/   \__\/     \___\/    \__\/    \_\
+          ___           ____________      ____       ___      ___    __
+         /  /\         /____   ____/\    /    |\    /  /\    /  /|  /  /
+		/  / /         \___/  /\___\/   /  /| ||   /  / /   /  / '/  /
+	   /  / /             /  / /       /  / | ||  /  / /   /  / /  /
+	  /  / /             /  / /       /  / /| || /  / /   /   '  / 
+	 /  / /             /  / /       /  / / | ||/  / /   /  /\  \
+	/  /_/____     ____/  /_/__     /  / /  | |/  / /   /  / /\  \
+   /_________/\   /___________/\   /__/ /   |____/ /   /__/ /  \__\
+   \_________\/   \___________\/   \__\/     \___\/    \__\/    \__\
 
 -->
 
-<h2 id="links">Helpful sites to know about</h2>
+<h2 id="links">Important Sites</h2>
 <ul>
 <li><a href="http://chips.kaseorg.com/faq/">The Chip's Challenge FAQ</a>
 <li><a href="http://chips.kaseorg.com/solutions">AVI Solution archive</a>
 <li><a href="http://www.ecst.csuchico.edu/~pieguy/chips/">pieguy's leveset scoreboards</a>
 <li><a href="news://news.annexcafe.com/annexcafe.chips.challenge">The official Chip's Challenge newsgroup</a>
-
+<li><a href="http://groups.yahoo.com/chips_challenge/">The Chip's Challenge Yahoo group &ndash; a repository for levels</a>
 </ul>
 
 <!--
@@ -216,7 +236,7 @@ Temaplate for graphics:
 -->
 
 
-<h2 id="fansites">Chip's Challenge Fansites</h2>
+<!--h2 id="fansites">Chip's Challenge Fansites</h2>
 <ul>
 <li><a href="http://www.telusplanet.net/public/nfield/ChipChallenge/chip.htm">Richard Field's Chip's Challenge page</a>. This was probably the first page many chipsters stubled upon.</li>
 <li><a href="http://www.geocities.com/fishofgold/">Chips Plus</a>. Hasn't been updated in <em>years</em>, but contains many solution maps.</li>
@@ -227,12 +247,12 @@ Temaplate for graphics:
   and a <a href="http://chips.kaseorg.com/newsgroup/frameset.php?group=annexcafe.chips.challenge">web interface for the newsgroup</a>.</li>
 <li><a href="http://groups.yahoo.com/group/chips_challenge/files/">The chips_challenge yahoo group</a>. A repository for custom levelsets.</li>
 <li><a href="http://www.geocities.com/purpletentacle1977ca/">Jimmy Verneer's website</a>. Contains an "Official" scoreboard for CC1 and CCLP2, and links to many chipsters' sites.</li>
-<!--li><a href="http://www.metawire.org/~chrise/chip.php">Chris E.'s Chip's Challenge page</a>.</li-->
-<!--li><a href="http://ca.geocities.com/andy_tek/cc_portal">Chip's Challenge Portal</a>. Andrew R.'s site. Contains his levelset, and his two CC programs</li-->
-<!--li><a href="http://ccreloaded.ifastnet.com/">ccreloaded</a-->
+<!- -li><a href="http://www.metawire.org/~chrise/chip.php">Chris E.'s Chip's Challenge page</a>.</li- ->
+<!- -li><a href="http://ca.geocities.com/andy_tek/cc_portal">Chip's Challenge Portal</a>. Andrew R.'s site. Contains his levelset, and his two CC programs</li- ->
+<!- -li><a href="http://ccreloaded.ifastnet.com/">ccreloaded</a- ->
 <li><a href="http://www.ecst.csuchico.edu/~pieguy/main.html">pieguy's website</a>. Contains scoreboards for his two levelsets, pi.dat and pi^2.dat.</li>
 <li><a href="http://www.geocities.com/snowvale/">Chip's Challenge CyberCaf&eacute;</a>
-</ul>
+</ul-->
 
 <!-- footer -->
 
