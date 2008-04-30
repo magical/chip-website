@@ -9,7 +9,8 @@
 }
 
 body {
-	background: #d0dada url(images/mazetrans.png) center center;
+	/*background: #d0dada url(images/mazetrans.png) center center;*/
+	background: url(images/newmaze.png);
 	font-family: Tahoma, Helvetica, sans-serif;
 }
 
