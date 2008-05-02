@@ -14,12 +14,17 @@
 <!--
 @import url(chip.css);
 -->
+figure, div.figure {
+	display: block;
+	text-align: center;
+	margin: 1em; 
+}
 </style>
 </head>
 
 <!-- graphics coming soon -->
 <!-- toldya -->
-<!--#config sizefmt="bytes" timefmt="%Y-%m-%d"-->
+
 
 <body>
 
@@ -31,8 +36,8 @@
 My first levelset was AndrewE1.dat. When I started working on it, my goal was to create a new 149-level levelset, complete with secret levels and "lessons", but I realize now that I was being way too ambitious. My current goal is to create two ~20-level sets; one for the Lynx ruleset, and one for the MSCC ruleset.
 </p>
 <p>
-<a href="levels/AndrewE-Lynx.ccl">Download the Lynx levelset</a> (<!--#fsize file="levels/AndrewE-Lynx.ccl"--> bytes; 1 level, updated 2005-01-06)<br>
-For archival purposes, <a href="levels/AndrewE1.dat">AndrewE1.dat</a> is still available for download. (<!--#fsize file="levels/AndrewE1.dat"--> bytes)
+<a href="levels/AndrewE-Lynx.ccl">Download the Lynx levelset</a> (723 B; 1 level, updated 2005-01-06)<br>
+For archival purposes, <a href="levels/AndrewE1.dat">AndrewE1.dat</a> is still available for download. ( 22KB)
  <!--(21.9KB)-->
 </p>
 
@@ -53,13 +58,13 @@ These are for the original "CC1" levelset.
 <li><a href="chipmaps/52.gif">Level 52 (The Last Laugh)</a></li>
 </ul>
 
-<!---- ><hr><!---- > 
+<!-+-+-+-><hr><!-+-+-+-> 
 
 -->
 
 <h2 id="cclpinfo">cclpinfo</h2>
 <p>
-cclpinfo is a small utility I wrote in c that displays the number and name of all levels in a selected levelset, with options to display the time limit, password, chips required, and hint. cclpinfo was based on a program called datstat written by Madhav Shanbhag.
+cclpinfo is a small utility written by myself and Madhav Shanbhag which displays the number and name of all levels in a selected levelset, with options to display the time limit, password, chips required, and hint. cclpinfo was based on a program called datstat.
 </p>
 <p>
 Current version: 1.3<br>
@@ -75,30 +80,33 @@ Current version: 1.3<br>
 
 <h3 id="emulators">Emulators</h3>
 <dl>
-<dt><a href="http://www.muppetlabs.com/~breadbox/software/tworld/">Tile World</a>, created by <cite>Brian Raiter</cite></dt>
-<dd>An open-source program that emulates both the Microsoft <strong>and</strong> Atari Lynx versions of Chip's Challenge. Uses cool new graphics created by Anders Kaseorg, and comes with CCLP2, a new levelset made by combining everyone's favorite levels. Supports multiple levelsets.
+<dt><a href="http://www.muppetlabs.com/~breadbox/software/tworld/">Tile World</a>, created by Brian Raiter</dt>
+<dd>An open-source program that emulates both the Microsoft <em>and</em> Atari Lynx versions of Chip's Challenge. Uses cool new graphics created by Anders Kaseorg, and comes with CCLP2, a new levelset made by combining everyone's favorite levels. Supports multiple levelsets.
 </dl>
 
 <h3 id="editors">Level Editors</h3>
 <p>These programs allow you to create custom levels</p>
 <dl>
-<dt><a href="http://jke.stage62.com/chipedit/chipedit.htm">ChipEdit</a> created by <cite>John Elion</cite></dt>
+<dt><a href="http://jke.stage62.com/chipedit/chipedit.htm">ChipEdit</a> created by John Elion</dt>
 <dd>This was the first ever Chip's Challenge level editor.
 
-<dt><a href="http://web.archive.org/web/20030410045227/chrise.port5.com/prog/ChipW.htm">Chip's Workshop</a>, created by <cite>Chris E.</cite></dt>
-<dd>His web host, <a href="http://www.metawire.org">Metawire</a>, went down around February(?) 2006. If you want to download Chip's Workshop, you can use my <a href="../download/chipw.exe">mirrored copy</a>
+<!-- <dt><a href="http://web.archive.org/web/20030410045227/chrise.port5.com/prog/ChipW.htm">Chip's Workshop</a>, created by <cite>Chris E.</cite></dt>
+<dd>His web host, <a href="http://www.metawire.org">Metawire</a>, went down around February(?) 2006. If you want to download Chip's Workshop, you can use my <a href="../download/chipw.exe">mirrored copy</a> -->
 
-<dt><a href="http://cctools.translucentdragon.com/">CCEdit</a>, created by <cite>Micheal Hansen</cite></dt>
+<dt><a href="http://www.glarbex.com/chipw/">Chip's Workshop</a>, created by Christopher Elsby</dt>
+
+<dt><a href="http://cctools.translucentdragon.com/">CCEdit</a>, created by Micheal Hansen</dt>
 <dd>A very advanced level editor. Features playtesting in MSCC or Tile World.
+<dd>There's an <a href="http://cctools.translucentdragon.com/CCTools20alpha.zip">alpha version</a>.
 
-<dt><a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/c4"><abbr title="Chip's Challenge Combined Converter">c4</abbr></a>, a perl script written by <cite>Brian Raiter</cite></dt>
+<dt><a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/c4"><abbr title="Chip's Challenge Combined Converter">c4</abbr></a>, a perl script written by Brian Raiter</dt>
 <dd>This non-graphical command-line utility can convert Chip's Challenge files between various formats; including a special text-based format.
 </dl>
 
 <h3 id="managers">Level Managers</h3>
 <p>These programs help you manage and play custom levelsets</p>
 <dl>
-<dt><a href="http://chips.pillowpc2001.net/controls/">Chip's Controls</a>, created by <cite>Mike L.</cite></dt>
+<dt><a href="http://chips.pillowpc2001.net/controls/">Chip's Controls</a>, created by Mike L.</dt>
 <dt><a href="http://cctools.translucentdragon.com/">CCLM</a> (CC Level Manager)</dt>
 <dd>Part of CCTools, a level editing suite created by Michael Hansen; also available for download seperately.
 </dl>
@@ -109,16 +117,16 @@ Current version: 1.3<br>
 <dt><a href="http://cctools.translucentdragon.com/">CCHack</a></dt>
 <dd>Part of CCTools, a level editing suite created by Michael Hansen. This program allows you to customize chips.exe in many different ways.
 
-<dt><a href="MyChips.zip">MyChips</a>, created by <cite>Dale Bryan</cite></dt>
+<dt><a href="MyChips.zip">MyChips</a>, created by Dale Bryan</dt>
 <dd>Creates a modified version of chips.exe which uses different .ini and .dat files.
 
-<dt><a href="http://home.no.net/rspaans/download/other.html">T-Chip</a>, created by <cite>Ruben Spaans</cite></dt>
+<dt><a href="http://home.no.net/rspaans/download/other.html">T-Chip</a>, created by Ruben Spaans</dt>
 <dd>Grants 999 seconds on all untimed levels in chips.dat.
 
 <!--dt><a href="http://andyrole.byethost6.com/downloads.htm">ChipEnd</a>, created by <cite>Andrew Role</cite></dt>
 <dd>A graphical utility which modifies chips.exe to show the game ending at different levels than 144 and 149. Also has an option to suppress the "Decade Messages".-->
 
-<dt><a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/chipend">chipend</a>, created by <cite>Brian Raiter</cite></dt>
+<dt><a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/chipend">chipend</a>, created by Brian Raiter</dt>
 <dd>Changes the end level numbers stored in the exe, to avoid the "Corrupt or inaccessible CHIPS.DAT" message. Can also suppress the decade messages.
 
 <!--dt><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/pgchip/">pgchip</a>, created by <cite>David Stolp</cite> (aka pieguy)</dt>
@@ -130,17 +138,23 @@ Current version: 1.3<br>
 <dl>
 <dt><a href="#cclpinfo">cclpinfo</a>, created by me, Andrew E. (see description above)</dt>
 
-<dt><a href="http://chips.kaseorg.com/solutions/other.php">ChipCap</a>, created by <cite>Anders Kaseorg</cite></dt>
+<dt><a href="http://chips.kaseorg.com/solutions/other.php">ChipCap</a>, created by Anders Kaseorg</dt>
 <dd>A tool for capturing AVIs of Chip's Challenge.
 
-<dt><a href="http://home.no.net/rspaans/download/other.html">Mapmaker</a>, created by <cite>Ruben Spaans</cite></dt>
+<dt><a href="http://home.no.net/rspaans/download/other.html">Mapmaker</a>, created by Ruben Spaans</dt>
 <dd>Creates an image of a selected level from a levelset.
 
-<dt><a href="http://games.groups.yahoo.com/group/chips_challenge/files/%20MakeMap/">Makemap</a>, created by <cite>Johannes Postel</cite></dt>
+<dt><a href="http://games.groups.yahoo.com/group/chips_challenge/files/%20MakeMap/">Makemap</a>, created by Johannes Postel</dt>
 <dd>Uses Mapmaker to create multiple level maps with one command.
 
-<dt><a href="http://chips.pillowpc2001.net/controls/dacgen.htm">DacGen</a>, created by <cite>Mike L.</cite> </dt>
+<dt><a href="http://chips.pillowpc2001.net/controls/dacgen.htm">DacGen</a>, created by Mike L. </dt>
 <dd>Creates .dac files for tile world. It was later merged into Chip's Controls.
+
+<dt><a href="http://games.groups.yahoo.com/group/chips_challenge/files/KeyboardWielder/ccdiff.zip">ccdiff</a>, created by Madhav Shanbhag</dt>
+<dd>Shows the differences between two versions of a levelset.
+<dd><a href="ccdiff.zip">[mirror]</a>
+
+
 </dl>
 
 <!----><hr><!---->
@@ -148,43 +162,86 @@ Current version: 1.3<br>
 <h2 id="graphics">Graphics</h2>
 <p>Several very talented people have created their own custom graphics for Chip's Challenge.</p>
 
-<h3>"<a href="http://chips.kaseorg.com/pub/chips/" title="(It's the tiles.zip file)">The Tile World graphics</a>", created by <cite>Anders Kaseorg</cite></h3>
+<h3>"<a href="http://chips.kaseorg.com/pub/chips/" title="(It's the tiles.zip file)">The Tile World graphics</a>", created by Anders Kaseorg</h3>
 <p>
 Anders Kaseorg created this tileset for use in Tile World. The images were created with the help of <a href="http://en.wikipedia.org/wiki/POV-Ray">POV-Ray</a>, a ray-tracing program. As a result, they are much more 3D-looking than the original graphics.
 <p>
-Michael Hansen later used the graphics in a patch for MSCC, dubbed "<a href="http://cctools.translucentdragon.com/screenshots.htm">New Age CC</a>", to demonstrate CCHack.
-<p align="center">
-<img src="images/newage.jpg" alt="[A screenshot of New Age CC]" width="520px" height="400px">
+Michael Hansen later used the graphics in a graphical patch for MSCC, dubbed "<a href="http://cctools.translucentdragon.com/screenshots.htm">New Age CC</a>", to demonstrate CCHack.
+</p>
 
-<h3><a href="http://games.groups.yahoo.com/group/chips_challenge/files/Keyboard%20Wielder/">Natural CC</a>, created by <cite>Madhav Shanbhag</cite></h3>
+<div class="figure">
+<img src="images/newage.jpg" alt="" width="520" height="400">
+<br>
+<legend>(Pictured: CHIPS.DAT level 5, Lesson 5)</legend>
+</div>
+
+<h3><a href="http://games.groups.yahoo.com/group/chips_challenge/files/Keyboard%20Wielder/">Natural CC</a>, created by Madhav Shanbhag</h3>
 <p>
 Natural CC takes place in a sprawling field, where Chip runs around collecting [potato] chips, and avoiding quick-sand and lava.
 <p>
 Madhav pioneered the practice of distributing image patches to modifiy the existing graphics, rather than distributing the entire file. He even created a special tool, <dfn>patchbmp</dfn>, to help with the task. Time will tell whether other people will follow his example.
-<p align="center">
+</p>
 <!-- Unforunately, MSIE doesn't handle <object> tags very well, so I 
      have to use the <img> tag. -->
-<img src="images/naturalcc.png" alt="[A picture of a level being played using the Natural CC graphics]" width="288" height="288">
+<!--<img src="images/naturalcc.png" alt="" width="288" height="288">
+<br>
+(Pictured: CHIPS.DAT level 37, Seeing Stars)-->
 
-<h3>The <a href="http://www.freewebs.com/bit_busters/">Kayu Interface</a>, created by <cite>Master Kayu</cite></h3>
+<div class="figure">
+<img src="images/naturalcc2.png" alt="" width="520" height="406">
+<br>
+<legend>(Pictured: CHIPS.DAT level 100, Colony)</legend>
+</div>
+
+<h3>The <a href="http://games.groups.yahoo.com/group/chips_challenge/files/Enhanced Interface/kayu_interface_v2_2.zip">Kayu Interface</a>, created by Master Kayu</h3>
 <p>
 The Kayu Interface gives the Chip's Challenge graphics a much needed upgrade, with shinier tiles and a softer, calmer feel overall.
-<p align="center">
-<a href="http://www.freewebs.com/bit_busters/"><img src="images/kayu.jpg" alt="[A Chip's Challenge level, using the Kayu Interface graphics]" width="494" height="324"></a>
+<p><a href="graphics/kayu_interface_v2_2.zip">[mirror]</a>
+<div class="figure">
+<img src="images/kayu.jpg" alt="" width="494" height="324">
+<br>
+<legend>(Pictured: CHIPS.DAT level 99, Catacombs)</legend>
+</div>
+
+<h3><a href="sillyworld.zip">Silly World</a>, created by Brian Raiter</h3>
+<p>
+Whilst developing Tile World, Brian created some goofy graphics, which have since been replaced by Anders' 3-D tiles. They are still available for <a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/tiles-48x48-4bpp.zip">download</a> on his site, albeit slightly hidden. <a href="graphics/sillyworld-orig.zip">[mirror]</a>
+
+<p>I resized them and converted them into the "masked" format required by MSCC.
+He didn't call it Silly World, but i am now.</p>
+
+<div class="figure">
+<img src="images/sillyworld.png" alt="" width="520" height="406">
+<br>
+<legend>(Pictured: CHIPS.DAT level 46, Three Doors)</legend>
+</div>
+
+<h3><a href="http://something.gdarcade.taloncrossing.com/tech_junk/retroremixcc.zip">Retro Remix CC</a>, created by Christopher Trumbour</h3>
+<p>
+Christopher Trumbour screencapped every animation frame of every tile in the DOS port of Chip's Challenge, resized them, recolored them, and put them into Tile World's tile format to make this awesome tileset.
+</p>
+<p><a href="graphics/retroremixcc.zip">[mirror]</a></p>
+
+<div class="figure">
+<img src="images/retroremixcc.png" alt="" width="483" height="360">
+<br>
+<legend>(Pictured: CHIPS.DAT level 3, Lesson 3</legend>
+</div>
+
 
 <!--
 
 Template for program info:
 
-<dt><a href=""></a>, created by <cite></cite></dt>
+<dt><a href=""></a>, created by </dt>
 <dd>
 
 Temaplate for graphics:
 
-<h3><a href=""></a>, created by <cite></cite></h3>
+<h3><a href=""></a>, created by </h3>
 <p>
 </p>
-<img src="" alt="[]">
+<img src="" alt="" width="" height="">
 
 -->
 
@@ -193,17 +250,17 @@ Temaplate for graphics:
 <h2 id="patches">Patches</h2>
 There are a few patches that people have produced for the Windows port of Chip's Challenge.
 
-<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/ccpatch.html">ccpatch</a>, created by <cite>ccexplore</cite></h3>
+<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/ccpatch.html">ccpatch</a>, created by ccexplore</h3>
 <p>
 Fixes a bug where, when Chip steps on a square with two transparent objects (in other words, keys, monsters or boots), the game crashes.
 </p>
 
-<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/fullsec.html">fullsec</a>, created by <cite>ccexplore</cite></h3>
+<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/fullsec.html">fullsec</a>, created by ccexplore</h3>
 <p>
 Fixes another bug in the game, where the timer fails to fully reset. Also adds the ability to switch the game between even- and odd-step mode. <!--(For details on what that means, see <a href=""></a>)-->
 </p>
 
-<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/pgchip.html">pgchip</a>, created by <cite>pieguy</cite></h3>
+<h3><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/pgchip.html">pgchip</a>, created by pieguy</h3>
 <p>
 Transforms one of the previously unused tiles into the Ice Block.
 </p>
@@ -211,13 +268,13 @@ Transforms one of the previously unused tiles into the Ice Block.
 <!----><hr><!---->
 <!--
           ___           ____________      ____       ___      ___    __
-         /  /\         /____   ____/\    /    |\    /  /\    /  /|  /  /
-		/  / /         \___/  /\___\/   /  /| ||   /  / /   /  / '/  /
-	   /  / /             /  / /       /  / | ||  /  / /   /  / /  /
-	  /  / /             /  / /       /  / /| || /  / /   /   '  / 
-	 /  / /             /  / /       /  / / | ||/  / /   /  /\  \
-	/  /_/____     ____/  /_/__     /  / /  | |/  / /   /  / /\  \
-   /_________/\   /___________/\   /__/ /   |____/ /   /__/ /  \__\
+         /  /\         /____   ____/\    /    |\    /  /\    /  /|  /  /,
+        /  / /         \___/  /\___\/   /  /| ||   /  / /   /  / '/  / /
+       /  / /             /  / /       /  / | ||  /  / /   /  / /  / /
+      /  / /             /  / /       /  / /| || /  / /   /   '  / /
+     /  / /             /  / /       /  / / | ||/  / /   /  /\  \\
+    /  /_/____     ____/  /_/__     /  / /  | |/  / /   /  / /\  \\
+   /_________/\   /___________/\   /__/ /   |____/ /   /__/ /  \__\\
    \_________\/   \___________\/   \__\/     \___\/    \__\/    \__\
 
 -->
@@ -258,7 +315,13 @@ Transforms one of the previously unused tiles into the Ice Block.
 
 <hr>
 
-<p id="footer">This page was last updated on <!--#flastmod file="index.html"--></p>
+<!--<p id="footer">This page was last updated on <!-+-#flastmod file="index.html"-+-></p>
+<p id="footer">This page was last updated on <!-+-#echo var="LAST_MODIFIED"-+-></p>-->
+
+<p id="footer">This page was last updated on 2008-04-29</p>
+
+<!--This page was last updated on 2008-04-25-->
+<!--This page was last updated on 2007-01-22-->
 <!--This page was last updated on 2006-01-06-->
 <!--Last updated: 2006-01-03-->
 <!--Last updated: 07-29-2005-->
