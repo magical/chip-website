@@ -1,55 +1,82 @@
-#levelsets {
-	background: transparent url(images/chipfloor32.png) no-repeat center left;
+
+body {
+	/*background: #d0dada url(images/mazetrans.png) center center;*/
+	background: white url(images/newmaze.png);
+	color: black;
+	/*font-family: Tahoma, Helvetica, sans-serif;*/
+	/*font-family: Verdana, sans-serif;
+	line-height: 1.5em;*/
+	font: medium Verdana, sans-serif;
+}
+
+hr {
+	display: block;
+	border: none;
+	padding: 0;
+	margin: .5em 0;
+	border-top: dashed black 2px; 
+}
+
+
+.figure img {
+	border: 2px dashed black;
+	padding: 2px;
+}
+
+/*dd p { 
+	margin: 0 auto;
+}
+dd p ~ p {
+	margin-top: .5em;
+}*/
+dd p { margin: .5em auto; }
+dd :first-child { margin-top: 0; }
+
+/*dd + dt {
+	margin-top: .5em;
+}*/
+
+dd {
+	margin-bottom: .5em;
+}
+
+figure, div.figure {
+	display: block;
+	text-align: center;
+	margin: 1em; 
+}
+
+.figure p + p.caption {
+	margin-top: -1em;
+}
+
+ul.nav {
+	margin: .5em 0;
+	padding: 0;
+}
+
+.nav li {
+	display: inline;
+	margin-right: .5em;
+}
+
+.nav li::before {
+	content: "|";
+	margin-right: .5em;
+}
+
+.nav li:first-child::before { content: none; }
+
+#levelsets, #links, #patches {
+	background: transparent no-repeat left center;
 	padding-left: 37px;
 	line-height: 32px;
 }
+#levelsets { background-image: url(images/chipfloor32.png); }
+#links { background-image: url(images/teleport32.png); }
+#patches { background-image: url(images/dirt+bug.png); }
 
 #footer {
 	font-size: 67.5%;
 }
 
-body {
-	/*background: #d0dada url(images/mazetrans.png) center center;*/
-	background: url(images/newmaze.png);
-	font-family: Tahoma, Helvetica, sans-serif;
-}
-
-hr {
-	border: none;
-	border-bottom: dashed black 2px; 
-	}
-
-object, img {
-	border: 2px black dashed;
-	padding: 2px;
-}
-
-p.screenshot {
-	margin: auto;
-	display: block;
-}
-
-dt { clear: left; }
-dt img { float: left !important;
-	border: none;
-	padding: 0; }
-
-
-
-
-/* Thanks, positioniseverything.net ! */
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-.clearfix { display: inline-table; }
-
-/* Hides from IE-mac \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* End hide from IE-mac */
