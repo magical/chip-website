@@ -3,15 +3,10 @@
 
 <head>
 <title>Andrew E.'s Chip's Challenge Page</title>
-<!-- <meta http-equiv="Content-type" content="text/html; charset=UTF-8"> -->
-<!--meta name=keywords content="Chip's Challenge, level maps, solution maps, cclpinfo, levelset"-->
+<!-- <meta charset="UTF-8"> -->
 <link rel="icon" href="exit.png" type="image/png">
-<link rel="toolbar icon" href="exit.png" type="image/png">
-<link rel="shortcut icon" href="exit.png" type="image/png">
 <style type="text/css">
-<!--
 @import url(chip.css);
--->
 </style>
 <!--[if IE]><script src="html5.js"></script><![endif]-->
 </head>
@@ -32,7 +27,6 @@
 <li><a href="#solutions">Solutions</a></li>
 <li><a href="#programs">Programs</a></li>
 <li><a href="#tilesets">Tilesets</a></li>
-<li><a href="#patches">Patches</a></li>
 <li><a href="#mechanics">Mechanics</a></li>
 <li><a href="#links">Links</a></li>
 </ul>
@@ -132,7 +126,7 @@ Current version: 1.3<br>
 <p>Programs people have created that relate to Chip's Challenge</p>
 
 <a name="emulators">
-<h3>Tile World</h3>
+<h3 id="tileworld">Tile World</h3>
 <dl>
 <dt><a href="http://www.muppetlabs.com/~breadbox/software/tworld/">Tile World</a>, created by Brian Raiter</dt>
 <dd>
@@ -182,21 +176,28 @@ Current version: 1.3<br>
 <dd>Part of CCTools, a level editing suite created by Michael Hansen; also available for download seperately.
 </dl>
 
-<h3 id="customizers">Customizers</h3>
-<p>These programs modify chips.exe in some way.</p>
+<a name="customizers"></a>
+<h3 id="patches">Patches</h3>
+<p>There are a few patches that people have produced for the Windows port of Chip's Challenge.</p>
 <dl>
+<dt><a href="MyChips.zip">MyChips</a>, created by Dale Bryan</dt>
+<dd>Creates a modified version of chips.exe which uses different .ini and .dat files.</dd>
+
+<dt><a href="http://www.pvv.org/~spaans/old/download/other.html">T-Chip</a>, created by Ruben Spaans</dt>
+<dd><p>Grants 999 seconds on all untimed levels in the original levelset. (Will not work with any other levelset.)</p></dd>
+
+<dt><a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/chipend">chipend</a>, created by Brian Raiter</dt>
+<dd><p>This perl script changes the end level numbers stored in the exe, to avoid the "Corrupt or inaccessible CHIPS.DAT" message. It can also suppress the <a href="http://chipschallenge.wikia.com/wiki/Decade_Message">decade messages.</a></p></dd>
+
 <dt><a href="http://cctools.translucentdragon.com/">CCHack</a>, created by Michael Hansen</dt>
 <dd>
 <p>
 This program allows you to customize nearly everything about chips.exe.
-Including the program title, the "decade messages", the ending level, the death messages, etc.
+Including the program title, the decade messages, the ending level, the death messages, etc.
 But most importantly it lets you change the graphics.
 
 <p>Part of CCTools.</p>
 </dd>
-
-<dt><a href="MyChips.zip">MyChips</a>, created by Dale Bryan</dt>
-<dd>Creates a modified version of chips.exe which uses different .ini and .dat files.</dd>
 
 <!--
 Gone.
@@ -206,63 +207,12 @@ Gone.
 
 -->
 
-<dt><a href="http://www.muppetlabs.com/~breadbox/pub/software/tworld/chipend">chipend</a>, created by Brian Raiter</dt>
-<dd>Changes the end level numbers stored in the exe, to avoid the "Corrupt or inaccessible CHIPS.DAT" message. Can also suppress the decade messages.</dd>
-
-<!--
-Moved below.
-
-<dt><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/pgchip/">pgchip</a>, created by <cite>David Stolp</cite> (aka pieguy)</dt>
-<dd>Adds an entirely new tile to the game: the Ice Block! Ice blocks turn fire into water, and water into ice. Also, you can push multiple ice blocks in a row. pieguy created this patch so people would be able to play one of his devious levels. Check out pieguy's site to learn more about what ice blocks can do.
-
--->
-
-</dl>
-
-<h3 id="tools">Other tools</h3>
-<dl>
-<dt><a href="#cclpinfo">cclpinfo</a>, created by me, Andrew E. (see description above)</dt>
-<dd></dd>
-
-<dt><a href="http://chips.kaseorg.com/solutions/other.php">ChipCap</a>, created by Anders Kaseorg</dt>
-<dd>A tool for capturing AVIs of Chip's Challenge.</dd>
-
-<dt><a href="http://www.pvv.org/~spaans/old/download/other.html">Mapmaker</a>, created by Ruben Spaans</dt>
-<dd>Creates an image of a selected level from a levelset.</dd>
-
-<dt><a href="http://games.groups.yahoo.com/group/chips_challenge/files/%20MakeMap/">Makemap</a>, created by Johannes Postel</dt>
-<dd>Uses Mapmaker to create multiple level maps with one command.</dd>
-
-<dt><a href="http://www.pillowpc2001.net/controls/dacgen.htm">DacGen</a>, created by Mike L. </dt>
-<dd>Creates .dac files for tile world. It was later merged into Chip's Controls.</dd>
-
-<dt><a href="http://games.groups.yahoo.com/group/chips_challenge/files/Keyboard Wielder/ccdiff.zip">ccdiff</a>, created by Madhav Shanbhag</dt>
-<dd>
-<p>Shows the differences between two versions of a levelset.
-<p><a href="ccdiff.zip">[mirror]</a>
-</dd>
-
-</dl>
-
-
-<h3 id="patches">Patches</h3>
-
-<p>There are a few patches that people have produced for the Windows port of Chip's Challenge.</p>
-
-<dl>
-
-<dt><a href="http://www.pvv.org/~spaans/old/download/other.html">T-Chip</a>, created by Ruben Spaans</dt>
-<dd>
-<p>
-Grants 999 seconds on all untimed levels in chips.dat.
-</p>
-</dd>
-
 <dt><a href="http://www.ecst.csuchico.edu/~pieguy/chips/patches/ccpatch.html">ccpatch</a>, created by ccexplore</dt>
 <dd>
 <p>
 Fixes the bug in MSCC which causes the game to crash when Chip enters a square containing two transparent tiles (monsters, keys and boots) or a transparent tile on a block.
 </p>
+
 <p>pieguy explains:</p>
 <blockquote>
 more technically, it is an infinite recursion (infinite loops tend to
@@ -294,6 +244,33 @@ Transforms one of the previously unused tiles into the Ice Block, from CC2.
 
 </dl>
 
+
+</dl>
+
+<h3 id="tools">Other tools</h3>
+<dl>
+<dt><a href="#cclpinfo">cclpinfo</a>, created by me, Andrew E. (see description above)</dt>
+<dd></dd>
+
+<dt><a href="http://chips.kaseorg.com/solutions/other.php">ChipCap</a>, created by Anders Kaseorg</dt>
+<dd>A tool for capturing AVIs of Chip's Challenge.</dd>
+
+<dt><a href="http://www.pvv.org/~spaans/old/download/other.html">Mapmaker</a>, created by Ruben Spaans</dt>
+<dd>Creates an image of a selected level from a levelset.</dd>
+
+<dt><a href="http://games.groups.yahoo.com/group/chips_challenge/files/%20MakeMap/">Makemap</a>, created by Johannes Postel</dt>
+<dd>Uses Mapmaker to create multiple level maps with one command.</dd>
+
+<dt><a href="http://www.pillowpc2001.net/controls/dacgen.htm">DacGen</a>, created by Mike L. </dt>
+<dd>Creates .dac files for tile world. It was later merged into Chip's Controls.</dd>
+
+<dt><a href="http://games.groups.yahoo.com/group/chips_challenge/files/Keyboard Wielder/ccdiff.zip">ccdiff</a>, created by Madhav Shanbhag</dt>
+<dd>
+<p>Shows the differences between two versions of a levelset.
+<p><a href="ccdiff.zip">[mirror]</a>
+</dd>
+
+</dl>
 
 <!----><hr><!---->
 
@@ -438,15 +415,15 @@ Template for graphics:
 
 <!----><hr><!---->
 <!--
-          ___           ____________      ____       ___      ___    __
-         /  /\         /____   ____/\    /    |\    /  /\    /  /|  /  /,
-        /  / /         \___/  /\___\/   /  /| ||   /  / /   /  / '/  / /
-       /  / /             /  / /       /  / | ||  /  / /   /  / /  / /
-      /  / /             /  / /       /  / /| || /  / /   /   '  / /
-     /  / /             /  / /       /  / / | ||/  / /   /  /\  \\
-    /  /_/____     ____/  /_/__     /  / /  | |/  / /   /  / /\  \\
-   /_________/\   /___________/\   /__/ /   |____/ /   /__/ /  \__\\
-   \_________\/   \___________\/   \__\/     \___\/    \__\/    \__\
+         ___          ____________     ____       ___     ___    __      ________ 
+        /  /\        /____   ____/\   /    |\    /  /\   /  /|  /  /,  -  ______/\
+       /  / /        \___/  /\___\/  /  /| ||   /  / /  /  / '/  / /  /  /\_____\/
+      /  / /            /  / /      /  / | ||  /  / /  /  / /  / /   |  |_/____   
+     /  / /            /  / /      /  / /| || /  / /  /   '  / /     |\______ \\  
+    /  / /            /  / /      /  / / | ||/  / /  /  /\  \\        \______\ \\ 
+   /  /_/____    ____/  /_/__    /  / /  | |/  / /  /  / /\  \\      ________/ /| 
+  /_________/\  /___________/\  /__/ /   |____/ /  /__/ /  \__\\    /_________/ / 
+  \_________\/  \___________\/  \__\/     \___\/   \__\/    \__\    \_________\/  
 
 -->
 
@@ -549,6 +526,7 @@ http://www.tasksavvy.com/cc/ccld/
 http://en.wikipedia.org/wiki/Chip%27s_Challenge
 http://chipschallenge.wikia.com/wiki/Chip%27s_Challenge_Wiki
 http://www.youtube.com/user/ChipWiki
+chipsportal.com
 
 http://www.scuzzstuff.org/chipschallenge/
 http://www.svatopluk.com/chip/
@@ -558,6 +536,8 @@ http://www.svatopluk.com/chip/
 <!--
 Changelog:
 
+2010-02-28:
+	Merged the "Patches" and "Customizers" sections.
 2009-12-05:
 	Added Drawn Tiles by Nicholas.
 2009-12-01:

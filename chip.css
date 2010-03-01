@@ -1,26 +1,32 @@
 
+/* HTML5 */
+nav, section, article, figure, footer { display: block; }
+
+
 body {
 	/*background: #d0dada url(images/mazetrans.png) center center;*/
-	background: white url(images/newmaze.png);
+	background: white url(images/newmaze.png) 8px top repeat;
 	color: black;
 	/*font-family: Tahoma, Helvetica, sans-serif;*/
 	/*font-family: Verdana, sans-serif;
 	line-height: 1.5em;*/
-	font: medium Verdana, sans-serif;
+	font: medium/1.25 "Bitstream Vera Sans", Verdana, sans-serif;
 }
 
 hr {
 	display: block;
 	border: none;
 	padding: 0;
-	margin: .5em 0;
+	margin: .625em 0;
 	border-top: dashed black 2px; 
 }
 
+h1, h2, h3 { text-shadow: #999 -1px 1px 2px; }
 
-.figure img {
-	border: 2px dashed black;
-	padding: 2px;
+p {
+	font-size: 1em;
+	margin-top: .625em;
+	margin-bottom: .625em;
 }
 
 /*dd p { 
@@ -29,7 +35,7 @@ hr {
 dd p ~ p {
 	margin-top: .5em;
 }*/
-dd p { margin: .5em auto; }
+dd p { margin: .625em auto; }
 dd :first-child { margin-top: 0; }
 
 /*dd + dt {
@@ -40,33 +46,43 @@ dd {
 	margin-bottom: .5em;
 }
 
-figure, div.figure {
+figure {
 	display: block;
 	text-align: center;
-	margin: 1em; 
+	margin: 0 1em 1em 0;
+	font-size: smaller;
+}
+figure img {
+	border: 2px dashed black;
+	padding: 2px;
+}
+figure dd, figure dt {
+	margin: 0;
 }
 
-.figure p + p.caption {
-	margin-top: -1em;
-}
+figure { float: left; width: 50%; }
+figure img { width: 100%; height: auto; }
+h3 { clear: left; }
 
-ul.nav {
+nav ul {
 	margin: .5em 0;
 	padding: 0;
 }
 
-.nav li {
+nav li {
 	display: inline;
 	margin-right: .5em;
 }
 
-.nav li::before {
+nav li:not(:first-child)::before {
 	content: "|";
 	margin-right: .5em;
+	margin-left: -.25em;
 }
 
-.nav li:first-child::before { content: none; }
+/*nav li:first-child::before { content: none; }*/
 
+/* pictures */
 #levelsets, #links, #patches {
 	background: transparent no-repeat left center;
 	padding-left: 37px;
@@ -76,7 +92,7 @@ ul.nav {
 #links { background-image: url(images/teleport32.png); }
 #patches { background-image: url(images/dirt+bug.png); }
 
-#footer {
+footer {
 	font-size: 67.5%;
 }
 
