@@ -1,18 +1,23 @@
 
 /* HTML5 */
-nav, section, article, figure, footer { display: block; }
+article, figure, figcaption, footer, nav, section { display: block; }
 
+html, body { margin: 0; padding: 0; }
 
 body {
 	/*background: #d0dada url(images/mazetrans.png) center center;*/
-	background: white url(images/newmaze.png) 8px top repeat;
+	background: white url(images/newmaze.png) .625em top repeat;
 	color: black;
 	/*font-family: Tahoma, Helvetica, sans-serif;*/
 	/*font-family: Verdana, sans-serif;
 	line-height: 1.5em;*/
 	font: medium/1.25 "Bitstream Vera Sans", Verdana, sans-serif;
+	padding: 0 .625em;
 }
 
+body>nav, body>section, body>footer {
+	border-top: 2px dashed;
+}
 hr {
 	display: block;
 	border: none;
@@ -21,51 +26,45 @@ hr {
 	border-top: dashed black 2px; 
 }
 
-h1, h2, h3 { text-shadow: #999 -1px 1px 2px; }
-
-p {
-	font-size: 1em;
-	margin-top: .625em;
-	margin-bottom: .625em;
+h1 {
+	margin: 32px 0;
+	font-size: 36px;
+	line-height: 32px;
 }
 
-/*dd p { 
-	margin: 0 auto;
+h1, h2, h3 {
+	text-shadow: #999 -1px 1px 2px;
+	text-shadow: rgba(0, 0, 0, .4) -1px 1px 2px;
+	font-family: "Bitstream Vera Sans Mono", "Lucida Sans Unicode", "Lucida Sans", "Monaco", "Bitstream Vera Sans", "Verdana", sans-serif;
 }
-dd p ~ p {
-	margin-top: .5em;
-}*/
-dd p { margin: .625em auto; }
+
+p { margin: .625em 0; }
+blockquote { margin: .625em 32px; }
+
+dd { margin-left: 32px; }
+dd { margin-bottom: .625em; } /* for empty `dd`s */
+
+/*dd p { margin: 0 auto; }
+dd p ~ p { margin-top: .5em; }*/
 dd :first-child { margin-top: 0; }
-
-/*dd + dt {
-	margin-top: .5em;
-}*/
-
-dd {
-	margin-bottom: .5em;
-}
 
 figure {
 	display: block;
 	text-align: center;
-	margin: 0 1em 1em 0;
-	font-size: smaller;
+	margin: 0 .625em .625em 0;
 }
 figure img {
 	border: 2px dashed black;
 	padding: 2px;
 }
-figure dd, figure dt {
-	margin: 0;
-}
+figcaption { font-size: smaller; }
 
-figure { float: left; width: 50%; }
-figure img { width: 100%; height: auto; }
+figure { float: left; clear: left; width: 49%; }
+figure img { width: 98%; height: auto; }
 h3 { clear: left; }
 
 nav ul {
-	margin: .5em 0;
+	margin: .3125em 0;
 	padding: 0;
 }
 
@@ -80,19 +79,15 @@ nav li:not(:first-child)::before {
 	margin-left: -.25em;
 }
 
-/*nav li:first-child::before { content: none; }*/
 
 /* pictures */
-#levelsets, #links, #patches {
+#levelsets h2, #links h2, #patches h2 {
 	background: transparent no-repeat left center;
 	padding-left: 37px;
 	line-height: 32px;
 }
-#levelsets { background-image: url(images/chipfloor32.png); }
-#links { background-image: url(images/teleport32.png); }
-#patches { background-image: url(images/dirt+bug.png); }
+#levelsets h2 { background-image: url(images/chipfloor32.png); }
+#links     h2 { background-image: url(images/teleport32.png); }
+#patches   h2 { background-image: url(images/dirt+bug.png); }
 
-footer {
-	font-size: 67.5%;
-}
-
+footer { font-size: 67.5%; } 
