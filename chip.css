@@ -59,8 +59,8 @@ figure img {
 }
 figcaption { font-size: smaller; }
 
-figure { float: left; clear: left; width: 49%; }
-figure img { width: 98%; height: auto; }
+figure { float: left; clear: left; max-width: 49%; }
+figure img { max-width: 99.9%; height: auto; }
 h3 { clear: left; }
 
 nav ul {
