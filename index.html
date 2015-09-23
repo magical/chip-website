@@ -5,23 +5,7 @@
 <title>Andrew E.'s Chip's Challenge Page</title>
 <meta charset="utf-8">
 <link rel="icon" href="exit.png" type="image/png">
-<style type="text/css" title="Maze">
-@import url(chip.css);
-.heading-anchor-link {
-    display: none;
-    color: #808080;
-    margin-left: 1ex;
-    text-decoration: none;
-    text-shadow: none;
-}
-.heading-anchor-link:hover {
-    text-decoration: underline;
-}
-:hover > .heading-anchor-link {
-    display: inline;
-}
-
-</style>
+<link rel="stylesheet" href="chip.css">
 <script>
 /* Progressive enhancement: show anchor links after <h?> tags */
 function add_heading_anchor_links()
@@ -29,9 +13,9 @@ function add_heading_anchor_links()
     // need to resort to this Array.slice.call tomfoolery to turn
     // HTMLCollection into a real Array.
     headings = [].concat(
-        Array.slice.call(document.getElementsByTagName("h2")),
-        Array.slice.call(document.getElementsByTagName("h3")),
-        Array.slice.call(document.getElementsByTagName("dt"))
+        [].slice.call(document.getElementsByTagName("h2")),
+        [].slice.call(document.getElementsByTagName("h3")),
+        [].slice.call(document.getElementsByTagName("dt"))
     );
 
     function create_link(id)

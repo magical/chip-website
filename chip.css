@@ -91,3 +91,18 @@ nav li:not(:first-child)::before {
 #patches   h2 { background-image: url(images/dirt+bug.png); }
 
 footer { font-size: 67.5%; } 
+
+/* JS header anchor styles */
+.heading-anchor-link {
+    display: none;
+    color: #808080;
+    margin-left: 1ex;
+    text-decoration: none;
+    text-shadow: none;
+}
+.heading-anchor-link:hover {
+    text-decoration: underline;
+}
+:hover > .heading-anchor-link {
+    display: inline;
+}
