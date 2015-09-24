@@ -1,9 +1,11 @@
+"use strict";
+
 /* Progressive enhancement: show anchor links after <h?> tags */
 function add_heading_anchor_links()
 {
     // need to resort to this Array.slice.call tomfoolery to turn
     // HTMLCollection into a real Array.
-    headings = [].concat(
+    var headings = [].concat(
         [].slice.call(document.getElementsByTagName("h2")),
         [].slice.call(document.getElementsByTagName("h3")),
         [].slice.call(document.getElementsByTagName("dt"))
