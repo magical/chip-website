@@ -31,14 +31,11 @@ function add_heading_anchor_links()
     var sections = document.getElementsByTagName("section");
     for (i = 0; i < sections.length; i++) {
         if (sections[i].id) {
-            elem = sections[i].firstChild;
             // find the first heading
-            while (elem) {
+            for (elem = sections[i].firstChild; elem; elem = elem.nextSibling) {
                 if (elem.tagName === 'H2' || elem.tagName === 'H3') {
                     elem.appendChild(create_link(sections[i].id));
                     break;
-                } else {
-                    elem = elem.nextSibling;
                 }
             }
         }
