@@ -8,10 +8,7 @@ body {
 	/*background: #d0dada url(images/mazetrans.png) center center;*/
 	background: white url(images/newmaze.png) .625em top repeat;
 	color: black;
-	/*font-family: Tahoma, Helvetica, sans-serif;*/
-	/*font-family: Verdana, sans-serif;
-	line-height: 1.5em;*/
-	font: medium/1.25 "Bitstream Vera Sans", Verdana, sans-serif;
+	font: medium/1.25 sans-serif;
 	padding: 0 .625em;
 }
 
@@ -35,7 +32,7 @@ h1 {
 h1, h2, h3 {
 	text-shadow: #999 -1px 1px 2px;
 	text-shadow: rgba(0, 0, 0, .4) -1px 1px 2px;
-	font-family: "Bitstream Vera Sans Mono", "Lucida Sans Unicode", "Lucida Sans", "Monaco", "Bitstream Vera Sans", "Verdana", sans-serif;
+	font-family: monospace, sans-serif;
 }
 
 p { margin: .625em 0; }
