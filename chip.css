@@ -16,6 +16,7 @@ body {
 body>nav, body>section, body>footer {
 	border-top: 2px dashed;
 }
+
 hr {
 	display: block;
 	border: none;
@@ -34,6 +35,7 @@ h1, h2, h3 {
 	text-shadow: #999 -1px 1px 2px;
 	text-shadow: rgba(0, 0, 0, .4) -1px 1px 2px;
 	font-family: monospace, sans-serif;
+	clear: both;
 }
 
 p { margin: .625em 0; }
@@ -46,20 +48,21 @@ dd { margin-bottom: .625em; } /* for empty `dd`s */
 dd p ~ p { margin-top: .5em; }*/
 dd :first-child { margin-top: 0; }
 
-figure {
-	display: block;
-	text-align: center;
-	margin: 0 .625em .625em 0;
-}
+figure { display: block; text-align: center; margin: 0; }
+
 figure img {
 	border: 2px dashed black;
 	padding: 2px;
+	max-width: 300px;
+	height: auto;
 }
+
 figcaption { font-size: smaller; }
 
-figure { float: left; clear: left; max-width: 49%; }
-figure img { max-width: 99.9%; height: auto; }
-h3 { clear: left; }
+.singleimage { float: right; clear: right; margin-left: 2em; }
+.twoimages { display: table; width: 100%; }
+.twoimages figure { display: table-cell; vertical-align: middle; }
+.twoimages figure img { width: 90%; }
 
 nav ul {
 	margin: .3125em 0;
