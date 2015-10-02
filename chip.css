@@ -10,6 +10,7 @@ body {
 	color: black;
 	font: medium/1.25 sans-serif;
 	padding: 0 .625em;
+	max-width: 800px;
 }
 
 body>nav, body>section, body>footer {
