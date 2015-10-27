@@ -258,7 +258,7 @@ Fixes the bug in MSCC which causes the game to crash when Chip enters a square c
 
 <p>pieguy explains:</p>
 <blockquote>
-more technically, it is an infinite recursion. [...] the rule for
+the rule for
 determining if chip can enter a tile is to check the bottom layer only
 if the top tile is transparent (which is done recursively).  however, if
 the bottom layer is also transparent, then it will recursively check the 
@@ -279,7 +279,11 @@ Fixes another bug in the game, where the timer fails to fully reset. Also adds t
 <dt id=pgchip><a href="http://www.davidstolp.com/old/chips/patches/pgchip.html">pgchip</a>, created by David "pieguy" Stolp</dt>
 <dd>
 <p>
-Adds the Ice Block to MSCC.  Ice Blocks are from the (sadly) unreleased CC2: you can push multiple Ice Blocks at once, and they turn Fire into Water and Water into Ice&mdash;plus several other properties.
+Adds ice blocks to MSCC.  Ice blocks are a tile from CC2. You can push several ice blocks at once; they turn fire into water and water into ice; they also remove dirt and can be pushed by tanks and teeth.
+<p>
+I've written a similar patch for Tile World, which you can find in my
+<a href="https://github.com/magical/tworld/tree/iceblock">tworld/iceblock</a>
+branch on github.
 </p>
 </dd>
 
