@@ -1,0 +1,75 @@
+MSCC RNG Notes
+----
+
+MSCC uses the standard srand and rand functions from Microsoft's C library.
+It is a linear congruential generator with multiplier 214013 and accumulator 2531011.
+
+    uint32_t rngState;
+
+    void srand(uint16_t seed) {
+        rngState = seed;
+    }
+
+    int rand(void) {
+        rngState = (0x343fd*rngState + 0x269ec3);
+        return (rngState>>16) & 0x7fff;
+    }
+
+The RNG is seeded with the current time at program start.
+It is not re-seeded between levels, so the RNG state at the end of one level
+carries over to the next.
+
+    srand(GetCurrentTime());
+
+To get random numbers in a certain range, the game uses the following function:
+
+    int RandInt(int n) {
+        return rand() % n;
+    }
+
+
+Of course, knowing the RNG algorithm doesn't do you much unless you also know how the 
+game uses the random numbers it gets.
+
+MSCC uses randomness in three places: random force floors, walkers, and blobs.
+(Also in the ending animation, but that doesn't affect anything important.)
+
+Force floors are the simplest. 
+
+    switch RandInt(4)
+        case 0: north
+        case 1: south
+        case 2: west
+        case 3: east
+    end
+
+Walkers first try to move straight in the direction they are facing;
+if that direction is blocked, they then turn in a random direction
+and try that, until one succeeds or they have exhausted all directions.
+
+    try moving straight
+    if blocked
+        repeat until all directions tried or movement is not blocked
+            direction = RandInt(3)
+            if direction not already tried 
+                switch direction
+                    case 0: try moving left of the original direction
+                    case 1: try moving right of the original direction
+                    case 2: try moving opposite of the original direction
+                end
+            end
+        end
+    end
+
+Blobs are basically the same as walkers, except they choose a random direction
+to move initially instead of moving straight.
+Note: positive x is east, positive y is south.
+
+    repeat until (xdir == 0 and ydir != 0) or (ydir == 0 and xdir != 0)
+        xdir = RandInt(3)-1
+        ydir = RandInt(3)-1
+    end
+    try moving that direction
+    if blocked
+        same as walkers...
+    end
