@@ -1,0 +1,78 @@
+Notes on CC2's checksum scheme
+==============================
+
+Background
+----------
+
+The "KEY " chunk in C2M files stores a 128-bit hash. This
+was originally part of a scheme to prevent users from playing
+levels not made with the official editor, but was ripped out
+before the public release.[1]
+
+The "LOCK" chunk was also part of the scheme. 
+
+Most of the official levels still have vestigial "KEY " and
+"LOCK" chunks but the editor no longer adds them to new files,
+and their contents are ignored.
+
+The "LOCK" value is usually "Custom version for Chuck Sommerville\0",
+and an obfuscated version of this string appears in the
+executable. However, some levels in the official pack have a
+different value for it: usually the name of a member of the
+Chip's Challenge community. It seems likely that this was the
+name of a person to whom a beta copy was given.
+
+
+Details
+-------
+
+The contents of every chunk between the "LOCK" chunk and the
+"KEY " chunk are concatenated and hashed with a modified
+version of MD5. This includes the contents of the "LOCK" chunk
+but (obviously) not the contents of the "KEY " chunk. The
+chunk name and length are NOT included in the hashed data,
+just the contents. There is no delimiter between chunks.
+
+The "CC2M" and "VERS" chunks always appear before the "LOCK"
+chunk, and their contents are not[*] included in the hash.
+
+[*]: Actually, VERS was added after the checksum scheme was
+removed so its behaviour is special. It is not included when
+writing the level but it does seem to be when reading.
+
+The "PRPL" (replay) chunk appears after the "KEY " chunk, so
+its contents are not included in the hash.
+
+
+### Modified MD5 ###
+
+The MD5 state is initialized with a nonstandard set of
+constants, and the number of bits already processed is
+initialized to 0x200 (512 decimal).
+
+    A = 0xf8611bf2
+    B = 0xee782ca4
+    C = 0xf30869b2
+    D = 0xb048f18f
+    N = 0x200
+
+These values are probably from an intermediate state reached
+by processing one block of data. However, the input data which
+led to this state is unknown, and likely infeasible to recover.
+
+### Pseudocode ###
+
+    MD5_init(h, <precomputed values>)
+    for each chunk:
+        if chunk.name == "CC2M":
+            skip
+        else if chunk.name == "KEY "
+            break
+        else
+            MD5_Update(h, chunk.data)
+    MD5_Final(h)
+
+References
+----------
+
+[1]: https://www.facebook.com/groups/175825302437909/permalink/950827674937664/
