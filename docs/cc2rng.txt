@@ -1,0 +1,35 @@
+RANDOM NUMBER GENERATOR
+- walkers, green teleports, blobs, blobs converted in transmogrifier share the
+  same prng
+- green teleports eat 2 values: (relative index, direction)
+  - next_index = (current_index+lynx_prng()%256+1)%number_of_teleports
+    (where indexes are in reading order)
+  - direction = "URDL"[lynx_prng()&3]
+  - does not happen if there's only one green teleport! then we exit in
+    the opposite direction
+- the prng function is: 
+  static unsigned char lynx_prng(void) {
+      unsigned char n;
+      n = (prngvalue1 >> 2) - prngvalue1;
+      if (!(prngvalue1 & 0x02)) --n;
+      prngvalue1 = (prngvalue1 >> 1) | (prngvalue2 & 0x80);
+      prngvalue2 = (prngvalue2 << 1) | (n & 0x01);
+      return (prngvalue1 ^ prngvalue2) & 0xFF;
+  }
+  initialized with prngvalue1=prngvalue2=0
+  (same function as atari lynx)
+- walker direction:
+  lynx_prng()%4, the number of clockwise turns to make. 0 causes the same
+  direction to be taken, which causes another collision with the same obstacle,
+  followed by a direction change in the next tick
+- blobs! they use the same prng as walkers, but a modifier is added
+- for 4 patterns, the modifier starts with any value from 0 to 3, increases by
+  1 after each prng value eaten (for blob use)
+- for deterministic, modifier starts at 0x55
+- for deterministic and extra random, modifier function is:
+  static unsigned char blobvalue2(void) {
+	blob*=2;
+	if(blob<255) blob^=0x1D;
+	blob&=255;
+	return blob;
+  }
