@@ -30,21 +30,27 @@ body {
 <p><a href="http://www.davidstolp.com/old/chips/patches/fullsec.html">fullsec</a> is a patch for Chip's Challenge that fixes the timer to give you a full first second at the start of each level.
 Due to the way it was implemented, it is possible to force the game to reset the timer at any time during the level, not just at the start. This can be abused to arbitrarily gain seconds, or to manipulate teeth and blobs in ways that would otherwise be impossible.
 
-<p>fullsecfix is an updated version of fullsec that fixes this deficiency in fullsec.
+<p>fullsecfix is an updated version of fullsec that fixes this deficiency.
 
 <h2>how can i get it?</h2>
 
-There are several options:
+Download <a href="fullsecfix.zip">fullsecfix.zip</a>. The zip file contains:
 
 <ul>
-<li>fullsecfix.exe - a Windows executable for applying the patch, based on the original fullsec program. NOTE: apply to an <em>unpatched</em> copy of <code>CHIPS.EXE</code>, not to a fullsec-patched copy.
+<li>fullsecfix.exe - a Windows executable for applying the patch, based on the original fullsec program.
 
-<li>fullsecfix.zip - the source code of the patching program, for linux users and others
+<li>fullsec.c, fullsec.h - the source code of the patching program, for linux users and others
 
-<li>fullsecfix.ips - an IPS patch, which can be applied with <a href="https://fusoya.eludevisibility.org/lips/">Lunar IPS</a>, <a href="https://github.com/Alcaro/Flips">Flips</a>, <a href="https://www.marcrobledo.com/RomPatcher.js/">Rom Patcher JS<a> or any other IPS-compatible patching tool.
+<li><a href="patches/fullsecfix.ips">fullsecfix.ips</a> - an IPS patch, which can be applied with <a href="https://fusoya.eludevisibility.org/lips/">Lunar IPS</a>, <a href="https://github.com/Alcaro/Flips">Flips</a>, <a href="https://www.marcrobledo.com/RomPatcher.js/">Rom Patcher JS<a> or any other IPS-compatible patching tool.
+   This file can also be downloaded separately.
 
-<li>The "source code" for the patch itself is available as part of the <a href="">disassembly</a>, in case you can read assembly and want to see for yourself how the patch works.
+<li><strong>NOTE: apply fullsecfix to an <em>unpatched</em> copy of <code>CHIPS.EXE</code>, not to a fullsec-patched copy.</strong>
+</ul>
 
+
+Additionally:
+<ul>
+<li>The "source code" for the patch itself is available as part of the <a href="https://github.com/magical/CHIPS.EXE/commit/fullsecfix">disassembly</a>, in case you can read assembly and want to see for yourself how the patch works.
 </ul>
 
 <h2>technical details</h2>
@@ -56,13 +62,11 @@ There are several options:
 <p>The original fullsec patch modifies the function at <code>4:0950</code> in the executable to insert the tick reset code.
 This function is the one the parses the start of the DAT file, reading the first 6 bytes - the file signature and the number of levels.
 Fullsec replaced the signature check with the tick reset code.
-<p>
 It's true that this function is called every time a level starts &mdash; <code>CHIPS.EXE</code> has to read the DAT file every time a level starts in order to loads the level data.
 However, it can also be called at other times. In particular, whenever the game needs to check a password it has to read it from the DAT file.
 
-<p>My updated patch modifies the function at <code>4:0356</code> instead. This is the function that is actually responsible for starting a level. It clears the game state, calls another function to load the level data, resets the onscreen timer and chip count, and does a bunch of other bookkeeping. It's the function that's called when chip dies or reaches the exit, or when the user hits Previous/Next Level. In short, it's exactly the right time and place to reset the tick counter.
-<p>
-As a bonus, there are some superfluous instructions right nearby that we can clean up to make space for the patch, so we don't need to disable the signature check or anything.
+<p>My updated patch modifies the function at <code>4:0356</code> instead. This is the function that is actually responsible for starting a level. It clears the game state, loads the level data, resets the onscreen timer and chip count, and does a bunch of other bookkeeping. It's the function that's called when chip dies or reaches the exit, or when the user hits Previous/Next Level. In short, it's exactly the right time and place to reset the tick counter.
+(As a bonus, there are some superfluous instructions right nearby that we can clean up to make space for the patch, so we don't need to disable the signature check or anything.)
 </p>
 
 </body>
